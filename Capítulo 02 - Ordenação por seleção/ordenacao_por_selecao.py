@@ -9,13 +9,25 @@ def buscaMenor(arr):
     return menor_indice
 
 def ordenacaoporSelecao(arr):
-    novoArr = []
-
+    newArr = []
+    
     for i in range(len(arr)):
         menor = buscaMenor(arr)
-        novoArr.append(arr.pop(menor))
-    return novoArr
+        newArr.append(arr.pop(menor))
+    return newArr
 
-# exemplo de uso
-arr = [5, 4, 1, 2, 0, 3]
+# Exemplo de uso
+arr = [5, 2, 1, 3, 0, 4]
 print(ordenacaoporSelecao(arr))
+
+# Reduzir para um única função
+# def ordenacaoporSelecao(arr):
+#     for i in range(len(arr)):
+#         for j in range(i + 1, len(arr)):
+#             if arr[j] < arr[i]:
+#                 arr[j], arr[i] = arr[i], arr[j]
+#     return arr
+
+# Exemplo de uso
+# arr = [4, 2, 5, 1, 0, 3]
+# print(ordenacaoporSelecao(arr))
